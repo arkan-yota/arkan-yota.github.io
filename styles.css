@@ -2,6 +2,7 @@
 	font-family: "roboto-font";
 	src: url('Roboto-Light.ttf');
 }
+
 body {
     padding: 25px;
     background-color: white;
@@ -55,13 +56,20 @@ h2{
 	margin:3px;
 
 }
-h3{
+bc{
+	margin: 100pbcx;
+    padding: 1.1em;
+    border: solid;
+    font-weight: bold;
+    border-radius: 1em 10px;
 
+
+}
+h3{
 	padding-left: 1em;
 	padding-top: 2px;
 	padding-bottom: 0px;
 	margin:3px;
-    border-width: 10px;
 
 
 }
