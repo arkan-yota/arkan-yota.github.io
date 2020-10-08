@@ -15,6 +15,10 @@ body {
     color: white;
 }
 
+.image-to-switch{
+ filter: invert(0);
+}
+
 .trait{
 	border-top: 0.1px solid;
 	left: 0px;
