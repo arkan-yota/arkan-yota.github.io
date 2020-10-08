@@ -16,7 +16,11 @@ body {
 }
 
 .image-to-switch{
- filter: invert(0);
+    filter: invert(0);
+}
+.img-switch-dark{
+    filter: invert(1);
+
 }
 
 .trait{
@@ -57,6 +61,8 @@ h3{
 	padding-top: 2px;
 	padding-bottom: 0px;
 	margin:3px;
+    border-width: 10px;
+
 
 }
 div.main{
@@ -64,9 +70,6 @@ div.main{
 	position: absolute; 
 	left: 10%;
 	right: 10%;
-}
-img{
-    filter: invert(1);
 }
 /*a.link{
 	font-size:30px;
