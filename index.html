@@ -4,15 +4,16 @@
 		<link rel="stylesheet" href="styles.css">
         <script>
             function darklight() {
-               var element = document.body;
-               element.classList.toggle("dark-mode");
+       
+               document.body.classList.toggle("dark-mode");
+               document.getElementById("image-to-switch").classList.toggle("img-switch-dark");
             }
         </script>
 	</head>
 	<body>
 	<div class="main">
 		<h1>Arkan Yota</h1>
-        <div class="trait"></div><img src="Images/dark-mode-ico.jpg" onclick="darklight()">
+        <div class="trait"></div><img id="image-to-switch" src="Images/dark-mode-ico.jpg" onclick="darklight()">
 		<h2>Projets</h2>
 		<h3>ArkanYotaGame</h3>
 		<p>Pour l'installation:</p>
