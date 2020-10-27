@@ -6,6 +6,7 @@ body{
     color: var(--nowhite);
 
 }
+
 .dark-mode {
     --white: #000;
     --nowhite: #fff;
