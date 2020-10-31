@@ -1,11 +1,12 @@
-function darklight() {
+/*function darklight() {
     document.body.classList.toggle("dark-mode");
+	localStorage.setItem('color','dark');
+
+	var thebestcolor = localStorage.getItem('color');
+	window.alert(thebestcolor)
 }
 
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    darklight()
-};
 
 
 function menushow() {
@@ -16,4 +17,48 @@ function menushow() {
         else { x.style.display = "none";}
     });
     
+}*/
+
+
+function darklight(){
+	if(localStorage.getItem('color')==null){
+		SetStorageColor()
+	};
+	if(localStorage.getItem('color')=='dark'){
+    	localStorage.setItem('color','light');
+	}
+	else if(localStorage.getItem('color')=='light'){
+    	localStorage.setItem('color', 'dark');
+	};
+	
+	showtruecolor();
+};
+
+function menushow() {
+    /*(".pro").toggleClass("pro-active")
+    var menuelement = ["pro", "par", "skil", "soc"];
+    menuelement.forEach(function(item, index){
+        var x = document.getElementById(item);
+        if (x.style.display === "none") { x.style.display = "block"; } 
+        else { x.style.display = "none";}
+    });
+    */
 }
+
+function showtruecolor(){
+	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		localStorage.setItem('color','dark');
+	}else{
+		localStorage.setItem('color','light');
+	};
+}
+
+function showtruecolor(){
+	if(localStorage.getItem('color')==='dark'){
+    	document.body.classList.toggle("dark-mode");
+	}else if(localStorage.getItem('color')==='light'){
+    	document.body.classList.remove("dark-mode");
+	};
+}
+
+showtruecolor();
