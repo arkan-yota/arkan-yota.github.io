@@ -22,7 +22,7 @@ function menushow() {
 
 function darklight(){
 	if(localStorage.getItem('color')==null){
-		SetStorageColor()
+        getsystemcolor()
 	};
 	if(localStorage.getItem('color')=='dark'){
     	localStorage.setItem('color','light');
@@ -45,7 +45,7 @@ function menushow() {
     */
 }
 
-function showtruecolor(){
+function getsystemcolor(){
 	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		localStorage.setItem('color','dark');
 	}else{
@@ -61,4 +61,8 @@ function showtruecolor(){
 	};
 }
 
+// At lauch of page or reload
+if(localStorage.getItem('color')==null){
+    getsystemcolor()
+};
 showtruecolor();
